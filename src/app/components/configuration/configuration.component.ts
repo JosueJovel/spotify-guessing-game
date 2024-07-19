@@ -20,7 +20,8 @@ export class ConfigurationComponent implements OnInit {
   constructor(private service: GeneralServicesService,private router:Router) { }
 
   ngOnInit(): void {
-    this.difficulty = this.service.load('gameMode') || 'easy';
+    this.difficulty = this.service.load('gameMode') || ('easy');
+    localStorage.setItem('gameMode', this.difficulty); //Ensures current difficulty is saved in local storage
     this.lives = this.service.getLives();
   }
 
@@ -42,8 +43,8 @@ export class ConfigurationComponent implements OnInit {
         break;
       default:
         this.lives = 10; // default to easy mode
-    }
-    this.service.save('gameMode', this.difficulty);
+    } 
+    localStorage.setItem('gameMode', this.difficulty); //Ensures current difficulty is saved in local storage
     this.service.setLives(this.lives);
   }
 
