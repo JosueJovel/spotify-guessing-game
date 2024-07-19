@@ -1,9 +1,29 @@
 
   <!-- Also add conditions to buttons to look pressed based on variable. Do 3 ngifs also based on showLeaderboard (EX: easy button looks pressed if showLeaderboard=easy) -->
+  
   <div class="leaderboard-switches">
-      <button (click)="changeEasy()">Easy</button>
-      <button (click)="changeMedium()">Medium</button>
-      <button (click)="changeHard()">Hard</button>
+      <!-- Easy button pair -->
+      <div *ngIf="showLeaderboard === 'easy'; else easyElse">
+        <button class="pressed-button" (click)="changeEasy()">Easy</button>
+      </div>
+      <ng-template #easyElse>
+        <button (click)="changeEasy()">Easy</button>
+      </ng-template>
+
+      <div *ngIf="showLeaderboard === 'medium'; else mediumElse">
+        <button class="pressed-button" (click)="changeMedium()">Medium</button>
+      </div>
+      <ng-template #mediumElse>
+        <button (click)="changeMedium()">Medium</button>
+      </ng-template>
+
+      <div *ngIf="showLeaderboard === 'hard'; else hardElse">
+        <button class="pressed-button" (click)="changeHard()">Hard</button>
+      </div>
+      <ng-template #hardElse>
+        <button (click)="changeHard()">Hard</button>
+      </ng-template>
+
    </div>
   <!-- EASY -->
   <div *ngIf="showLeaderboard === 'easy'" class="leaderboard-container easy-leaderboard">
