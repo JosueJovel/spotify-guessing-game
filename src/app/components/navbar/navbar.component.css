@@ -1,0 +1,29 @@
+.link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    }
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    transition: color 0.2s;
+}
+
+h1:hover {
+    color: #1fc559
+}
+
+nav {
+    background-color: #1f1f1f;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 3px solid black;
+}

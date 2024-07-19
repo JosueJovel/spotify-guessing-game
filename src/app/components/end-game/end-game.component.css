@@ -1,0 +1,115 @@
+.form-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1fc559;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.game-summary-container {
+  width: 500px; /* or any other value you prefer */
+  margin: 40px auto; /* add some margin to center the container */
+  padding: 20px; /* add some padding to make the content more readable */
+   /* add a border to define the container */
+  border-radius: 10px; /* add a rounded corner to make it look nicer */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow to give it some depth */
+}
+
+
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.title-underline {
+  border-bottom: 1px solid black; /* adjust the color and thickness as needed */
+  width: 100%; /* make it full-width */
+  margin-bottom: 20px; /* add some space between the title and the list */
+}
+
+.game-summary-details {
+  padding: 20px;
+}
+
+.game-summary-details p {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.game-summary-details p:last-child {
+  border-bottom: none;
+}
+
+.save-button {
+  
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    transition: color 0.2s;
+    width: 130px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+
+.save-button:hover {
+  color: #1fc559; /* darker green on hover */
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+.form-group input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 5px;
+  margin-left: 8px;
+  margin-top: 5px;
+  background-color: #1f1f1f;
+  color: #ddd;
+}
+
+.form-group button[type="button"] {
+  width: 97%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  transition: color 0.2s;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.form-group button[type="button"]:hover {
+  color: #1fc559;
+}

@@ -1,0 +1,14 @@
+<div class="game-summary-container">
+  <h1 class="title">Game Summary</h1>
+  <div class="form-container"> 
+  <form class="form-group">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name">
+    <button type="button" class="save-button" (click)="wrapUpGame()">Save</button>
+  </form>
+  <div class="game-summary-details">
+    <p>Your name: {{ name }}</p>
+    <p>Points: {{ points }}</p>
+  </div>
+</div>
+</div>

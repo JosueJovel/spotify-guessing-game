@@ -1,0 +1,23 @@
+<app-countdown></app-countdown>
+<div class="centered">
+    <h2 class="inline-element">Points: {{ points }}</h2>
+    <div class="inline-element lives">Lives: {{ lives }}</div>
+  </div>
+
+
+<div *ngIf="startQuiz" class="quiz-container"> <!--Display this when startQuiz is TRUE (quiz has started)-->
+    <div class="quiz-container quiz-components">
+        <div class="audio-container">
+            <audio id="audioPlayer" controls loop autoplay>
+                <source [src]="songPreviewUrl">
+            </audio>        </div>
+        <div class="button-pair">
+            <button (click)="processAnswer(choice1)">{{choice1}}</button>
+            <button (click)="processAnswer(choice2)">{{choice2}}</button>
+        </div>
+        <div class="button-pair">
+            <button (click)="processAnswer(choice3)">{{choice3}}</button>
+            <button (click)="processAnswer(choice4)">{{choice4}}</button>
+        </div>
+    </div>
+</div>

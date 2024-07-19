@@ -1,0 +1,13 @@
+<div class="leaderboard-container">
+    <h1 class="title">Leaderboard</h1>
+    <div class="title-underline"></div> 
+    <ul class="leaderboard-list">
+      <li class="leaderboard-list-item" *ngFor="let player of leaderboard">
+        {{ player.name }} 
+        
+       <div class="leaderboard-list-score"> Score: {{ player.score }}</div>
+      </li>
+    </ul>
+  </div>
+ <!--<button (click)="clearLeaderboard()">clearLeaderboard</button>--> 
+  

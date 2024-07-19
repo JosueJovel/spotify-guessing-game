@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 style="color: white;">CONFIGURE GAME SETTINGS</h1>
+  <div class="configure-form">
+    <form>
+      <div class="form-group">
+        <label for="difficulty">Select Difficulty:</label>
+        <select (change)="onChangeGameMode($event)">
+          <option value="" >Make selection</option>
+          <option *ngFor="let mode of gameModes" [value]="mode.value" [selected]="difficulty === mode.value">
+            {{ mode.label }}
+          </option>
+        </select>
+
+        
+        <div *ngIf="!difficulty">
+          <small class="text-danger">Please choose a difficulty.</small>
+        </div>
+      </div>
+      <p>Lives: {{ lives }}</p>
+      <button type="button" class="button" (click)="saveConfiguration()">Save Configuration</button>
+      <button type="submit" class="button" (click)="startGame()">Start Game</button>
+    </form>
+  </div>
+</div>

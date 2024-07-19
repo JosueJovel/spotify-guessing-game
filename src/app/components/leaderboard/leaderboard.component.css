@@ -1,0 +1,60 @@
+.leaderboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1fc559;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+.title-underline {
+  border-bottom: 1px solid black; /* adjust the color and thickness as needed */
+  width: 100%; /* make it full-width */
+  margin-bottom: 20px; /* add some space between the title and the list */
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-list-item {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.leaderboard-list-item:hover {
+  background-color: #f0f0f0;
+  color:#1fc559;
+}
+
+.leaderboard-list-score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.leaderboard-list-score{
+  color: black;
+}

@@ -1,0 +1,109 @@
+.quiz-components {
+    background-color: #1fc559;
+    width: 80%; /* make the width 80% of the container */
+    margin: 0 auto; /* center the component horizontally */
+    border-radius: 15px;
+    padding: 20px;
+    display: flex; /* make it a flex container */
+    flex-direction: column; /* stack elements vertically */
+    align-items: center; /* center elements horizontally */
+}
+
+.quiz-components {
+  background-color: #1fc559;
+  width: 80%; /* make the width 80% of the container */
+  margin: 0 auto; /* center the component horizontally */
+  border-radius: 15px;
+  padding: 20px;
+  display: flex; /* make it a flex container */
+  flex-direction: column; /* stack elements vertically */
+  align-items: center; /* center elements horizontally */
+}
+
+.start {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#audioPlayer {
+    margin-bottom: 20px;
+}
+
+
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 14px;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    transition: color 0.2s;
+    width: 30vw;
+    height: 50px;
+    margin-bottom: 20px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+  }
+
+#start-button {
+    scale: 1.5;
+}
+
+button:hover {
+    color: #1fc559
+}
+
+.button-pair {
+    display: flex;
+
+}
+.lives-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lives {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1fc559; 
+  }
+  
+  .lives-value {
+    padding: 10px;
+    border: 2px solid #1fc559;
+    border-radius: 10px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    margin: 8px;
+  }
+  .inline-element {
+    display: inline-block;
+    font-size: 24px; /* set font size to 24px */
+    margin-right: 20px;
+    color: #1fc559; /* add some space between elements */
+  }
+  .centered {
+    text-align: center; /* center the elements horizontally */
+  }
+

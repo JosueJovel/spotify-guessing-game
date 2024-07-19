@@ -1,0 +1,20 @@
+<!-- <div *ngIf="authLoading || configLoading">Loading...</div>
+<div *ngIf="!authLoading && !configLoading">
+  Genre:
+  <select [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+    <option [value]=""></option>
+    <option [value]="genre" *ngFor="let genre of genres">
+      {{ genre }}
+    </option>
+  </select>
+</div>
+Temporarily commented out -->
+<!-- Home Screen -->
+
+ <div class="homeScreen">
+  <div class="homeScreen startMenu">
+    <h1>Welcome to Who's Who!</h1>
+    <button routerLink="/game">Play</button>
+    <button routerLink="/configuration">Configure Game</button>
+  </div>
+</div>
