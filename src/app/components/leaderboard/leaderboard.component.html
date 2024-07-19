@@ -1,13 +1,40 @@
-<div class="leaderboard-container">
+
+  <!-- EASY -->
+  <div class="leaderboard-container easy-leaderboard">
     <h1 class="title">Leaderboard</h1>
     <div class="title-underline"></div> 
     <ul class="leaderboard-list">
-      <li class="leaderboard-list-item" *ngFor="let player of leaderboard">
+      <li class="leaderboard-list-item" *ngFor="let player of easyLeaderboard">
         {{ player.name }} 
         
        <div class="leaderboard-list-score"> Score: {{ player.score }}</div>
       </li>
     </ul>
   </div>
- <!--<button (click)="clearLeaderboard()">clearLeaderboard</button>--> 
+
+    <!-- MEDIUM -->
+  <div class="leaderboard-container medium-leaderboard">
+    <h1 class="title">Leaderboard</h1>
+    <div class="title-underline"></div> 
+    <ul class="leaderboard-list">
+      <li class="leaderboard-list-item" *ngFor="let player of mediumLeaderboard">
+        {{ player.name }} 
+        
+       <div class="leaderboard-list-score"> Score: {{ player.score }}</div>
+      </li>
+    </ul>
+  </div>
+
+    <!-- HARD -->
+  <div class="leaderboard-container hard-leaderboard">
+    <h1 class="title">Leaderboard</h1>
+    <div class="title-underline"></div> 
+    <ul class="leaderboard-list">
+      <li class="leaderboard-list-item" *ngFor="let player of hardLeaderboard">
+        {{ player.name }} 
+        
+       <div class="leaderboard-list-score"> Score: {{ player.score }}</div>
+      </li>
+    </ul>
+  </div>
   

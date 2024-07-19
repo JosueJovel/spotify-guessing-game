@@ -17,11 +17,20 @@ const LeaderBoard_Data = [
 export class GeneralServicesService {
   private gameMode!: string;
   private lives!: number;
+  private leaderboard: { name: string; score: number }[] = []; //Leaderboard is an array of objects, starting empty
+  private easyLeaderboard: { name: string; score: number }[] = [];  
+  private mediumLeaderboard: { name: string; score: number }[] = [];
+  private hardLeaderboard: { name: string; score: number }[] = [];
 
   constructor() {
     this.loadFromLocalStorage();
-    this.leaderboard = JSON.parse(localStorage.getItem('leaderboard') || '[]');
-    this.points = parseInt(localStorage.getItem('points') || '0');
+    this.leaderboard = JSON.parse(localStorage.getItem('leaderboard') ?? '[]');
+    this.easyLeaderboard = JSON.parse(localStorage.getItem('easyLeaderboard') ?? '[]');
+    this.mediumLeaderboard = JSON.parse(localStorage.getItem('mediumLeaderboard') ?? '[]');
+    this.hardLeaderboard = JSON.parse(localStorage.getItem('hardLeaderboard') ?? '[]');
+
+
+    this.points = parseInt(localStorage.getItem('points') ?? '0');
   }
 
   // Save data to local storage
@@ -65,19 +74,71 @@ export class GeneralServicesService {
  
 
 
-  private leaderboard: { name: string; score: number }[] = []; //Leaderboard is an array of objects, starting empty
 
   addPlayerToLeaderboard(player: { name: string; score: number }): void {
-    this.leaderboard.push(player);
-    localStorage.setItem('leaderboard', JSON.stringify(this.leaderboard));
+    //Check for current difficulty, and push to easy/medium leaderboard (leaderboards are saved HERE)
+    switch (this.load('gameMode')) {
+      case 'easy':
+        this.easyLeaderboard.push(player);
+        localStorage.setItem('easyLeaderboard', JSON.stringify(this.easyLeaderboard)); 
+        break;
+
+      case 'medium':
+        this.mediumLeaderboard.push(player);
+        localStorage.setItem('mediumLeaderboard', JSON.stringify(this.mediumLeaderboard)); 
+        break;
+
+      case 'hard':
+        this.hardLeaderboard.push(player);
+        localStorage.setItem('hardLeaderboard', JSON.stringify(this.hardLeaderboard)); 
+        break;
+
+      default:
+        break;
+    }
+    // this.leaderboard.push(player);
+    // localStorage.setItem('leaderboard', JSON.stringify(this.leaderboard));
   }
 
+  //GETTERS
   getLeaderboard(): { name: string; score: number }[] {
     return this.leaderboard;
   }
-  getSortedLeaderboard(): { name: string; score: number }[] {
-    return this.leaderboard.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+  getEasyLeaderboard(): { name: string; score: number }[] {
+    return this.easyLeaderboard;
   }
+  getMediumLeaderboard(): { name: string; score: number }[] {
+    return this.mediumLeaderboard;
+  }
+  getHardLeaderboard(): { name: string; score: number }[] {
+    return this.hardLeaderboard;
+  }
+
+  getSortedLeaderboard(): { name: string; score: number }[] {
+    //Check for current difficulty, and fetch the correct sorted leaderboards
+    switch (this.load('gameMode')) {
+      case 'easy':
+        return this.easyLeaderboard.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+        break;
+
+      case 'medium':
+        return this.mediumLeaderboard.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+        break;
+
+      case 'hard':
+        return this.hardLeaderboard.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+        break;
+
+      default:
+        return this.leaderboard.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+        break;
+    }
+  }
+
+  sortLeaderboard(leaderboardToSort: { name: string; score: number }[]): { name: string; score: number }[] {
+    return leaderboardToSort.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0); //Sorted version of the leaderboard
+  }
+
   clearLeaderboard(): void {
     this.leaderboard = [];
     localStorage.removeItem('leaderboard');
