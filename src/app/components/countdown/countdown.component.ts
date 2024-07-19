@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,11 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.css']
 })
-export class CountdownComponent implements OnInit {
+export class CountdownComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
     this.startCountdown();
   }
   constructor(private router:Router){}
+  ngOnDestroy(): void {
+    this.stopCountdown();
+  }
 
   minutes = 1;
   seconds = 1;
