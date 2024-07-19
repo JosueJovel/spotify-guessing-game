@@ -1,7 +1,13 @@
 
+  <!-- Also add conditions to buttons to look pressed based on variable. Do 3 ngifs also based on showLeaderboard (EX: easy button looks pressed if showLeaderboard=easy) -->
+  <div class="leaderboard-switches">
+      <button (click)="changeEasy()">Easy</button>
+      <button (click)="changeMedium()">Medium</button>
+      <button (click)="changeHard()">Hard</button>
+   </div>
   <!-- EASY -->
-  <div class="leaderboard-container easy-leaderboard">
-    <h1 class="title">Leaderboard</h1>
+  <div *ngIf="showLeaderboard === 'easy'" class="leaderboard-container easy-leaderboard">
+    <h1 class="title">Leaderboard - Easy</h1>
     <div class="title-underline"></div> 
     <ul class="leaderboard-list">
       <li class="leaderboard-list-item" *ngFor="let player of easyLeaderboard">
@@ -13,8 +19,8 @@
   </div>
 
     <!-- MEDIUM -->
-  <div class="leaderboard-container medium-leaderboard">
-    <h1 class="title">Leaderboard</h1>
+  <div *ngIf="showLeaderboard === 'medium'" class="leaderboard-container medium-leaderboard">
+    <h1 class="title">Leaderboard - Medium</h1>
     <div class="title-underline"></div> 
     <ul class="leaderboard-list">
       <li class="leaderboard-list-item" *ngFor="let player of mediumLeaderboard">
@@ -26,8 +32,8 @@
   </div>
 
     <!-- HARD -->
-  <div class="leaderboard-container hard-leaderboard">
-    <h1 class="title">Leaderboard</h1>
+  <div *ngIf="showLeaderboard === 'hard'" class="leaderboard-container hard-leaderboard">
+    <h1 class="title">Leaderboard - Hard</h1>
     <div class="title-underline"></div> 
     <ul class="leaderboard-list">
       <li class="leaderboard-list-item" *ngFor="let player of hardLeaderboard">

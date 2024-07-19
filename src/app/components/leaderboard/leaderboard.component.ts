@@ -12,6 +12,7 @@ export class LeaderboardComponent implements OnInit {
   mediumLeaderboard: { name: string; score: number }[] = [];
   hardLeaderboard: { name: string; score: number }[] = [];
   newPlayer: { name: string; score: number } = { name: '', score: 0 };
+  showLeaderboard = "medium"
 
 
 
@@ -22,6 +23,16 @@ export class LeaderboardComponent implements OnInit {
     this.easyLeaderboard = this.service.sortLeaderboard(this.service.getEasyLeaderboard());
     this.mediumLeaderboard = this.service.sortLeaderboard(this.service.getMediumLeaderboard());
     this.hardLeaderboard = this.service.sortLeaderboard(this.service.getHardLeaderboard());
+  }
+
+  changeEasy() {
+    this.showLeaderboard = "easy";
+  }
+  changeMedium() {
+    this.showLeaderboard = "medium";
+  }
+  changeHard() {
+    this.showLeaderboard = "hard";
   }
   // clearLeaderboard(): void {
   //   this.service.clearLeaderboard();
