@@ -8,12 +8,11 @@
   border-radius: 15px;
 }
 .game-summary-container {
-  width: 500px; /* or any other value you prefer */
-  margin: 40px auto; /* add some margin to center the container */
-  padding: 20px; /* add some padding to make the content more readable */
-   /* add a border to define the container */
-  border-radius: 10px; /* add a rounded corner to make it look nicer */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow to give it some depth */
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -28,9 +27,9 @@
 }
 
 .title-underline {
-  border-bottom: 1px solid black; /* adjust the color and thickness as needed */
-  width: 100%; /* make it full-width */
-  margin-bottom: 20px; /* add some space between the title and the list */
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .game-summary-details {
