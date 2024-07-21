@@ -1,29 +1,37 @@
-.link {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    text-align: center;
-    color: white;
-    }
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    transition: color 0.2s;
-}
-
-h1:hover {
-    color: #1fc559
-}
-
 nav {
-    background-color: #1f1f1f;
+    background-color: #333; /* Darker background color */
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border-bottom: 3px solid black;
-}
+    padding: 1rem; /* Add some padding for better spacing */
+    border-bottom: 3px solid #444; /* Darker border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px; /* Smaller font size for better readability */
+    text-align: center;
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Smooth transition on hover */
+  }
+  
+  .link:hover {
+    color: #1fc559; /* Green hover color */
+  }
+  
+  .link:active {
+    color: #1fc559; /* Green active color */
+  }
+  
+  a {
+    margin: 0 20px; /* Add some margin between links */
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin */
+  }

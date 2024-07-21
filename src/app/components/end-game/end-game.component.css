@@ -112,3 +112,42 @@
 .form-group button[type="button"]:hover {
   color: #1fc559;
 }
+
+.game-summary-details {
+  padding: 30px; /* Increased padding for better spacing */
+  background-color: #333; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color:#1fc559 /* Subtle shadow */
+}
+
+.game-summary-details p {
+  padding: 15px; /* Increased padding for better spacing */
+  border-bottom: 1px solid #1fc559; /* Lighter border */
+  font-size: 18px; /* Increased font size for better readability */
+  font-weight: bold; /* Bold font for better contrast */
+  color: #1fc559; /* Darker text color */
+}
+
+.game-summary-details p:last-child {
+  border-bottom: none;
+}
+
+.form-group input[type="text"] {
+  width: 90%;
+  padding: 15px; /* Increased padding for better spacing */
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 18px; /* Increased font size for better readability */
+  outline: none;
+  margin-bottom: 10px; /* Added margin for better spacing */
+  margin-left: 8px;
+  margin-top: 5px;
+  background-color: #333; /* Light gray background */
+  color: #fff; /* Darker text color */
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #333; /* Green border on focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on focus */
+}
